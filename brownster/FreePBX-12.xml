@@ -65,5 +65,5 @@
   <Version>05616fd2</Version>
   <WebUI>http://[IP]:[PORT:8009]</WebUI>
   <Banner>http://svn.freepbx.org/freepbx/trunk/amp_conf/htdocs/admin/images/freepbx_small.png</Banner>
-  <Icon>http://svn.freepbx.org/freepbx/trunk/amp_conf/htdocs/admin/images/freepbx.png</Icon>
+  <Icon>https://www.freepbx.org/freepbx-distro-logo2/</Icon>
 </Container>
