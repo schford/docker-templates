@@ -4,8 +4,8 @@
   <Name>FreePBX 13</Name>
   <Description>FreePBX 13 - Thanks for this Docker goes to MicMay (mima84) based on the docker image jmar71n/freepbx so thanks to Jason Martin <jason@greenpx.co.uk></Description>
   <Project>https://www.freepbx.org/</Project>
-  <Registry>https://github.com/Brownster/Docker-FreePBX13</Registry>
-  <Repository>brownster/freepbx12021</Repository>
+  <Registry>https://github.com/micmay/docker-freepbx</Registry>
+  <Repository>mima84/docker-freepbx</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment/>
