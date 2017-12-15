@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Category>Communication</Category>
+<Category>Communication</Category>
   <Name>FreePBX 13</Name>
-  <Description>FreePBX 13 - Thanks for this Docker goes to MicMay (mima84) based on the docker image jmar71n/freepbx so thanks to Jason Martin <jason@greenpx.co.uk></Description>
+  <Description>FreePBX 13 with Asterisk 13 - Thanks for this Docker goes to MicMay - mima84 and 
+                    based on the docker image jmar71n_freepbx so thanks to Jason Martin
+  </Description>
   <Project>https://www.freepbx.org/</Project>
   <Registry>https://github.com/micmay/docker-freepbx</Registry>
   <Repository>mima84/docker-freepbx</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Environment/>
+ <Environment/>
   <Networking>
-    <Mode>bridge</Mode>      
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8082</HostPort>
+        <ContainerPort>8082</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir></ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
   <Version>05616fd2</Version>
   <WebUI>http://[IP]:[PORT:8082]</WebUI>
-  <Banner></Banner>
+  <Banner>http://svn.freepbx.org/freepbx/trunk/amp_conf/htdocs/admin/images/freepbx_small.png</Banner>
   <Icon>https://www.freepbx.org/freepbx-distro-logo2/</Icon>
 </Container>
