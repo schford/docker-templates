@@ -3,7 +3,7 @@
 <Category>Communication</Category>
   <Name>FreePBX 13</Name>
   <Description>FreePBX 13 with Asterisk 13 - Thanks for this Docker goes to MicMay - mima84 and 
-                    based on the docker image jmar71n_freepbx so thanks to Jason Martin
+                    based on the docker image jmar71n_freepbx so thanks to J Martin
   </Description>
   <Project>https://www.freepbx.org/</Project>
   <Registry>https://github.com/micmay/docker-freepbx</Registry>
