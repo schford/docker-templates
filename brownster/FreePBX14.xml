@@ -49,6 +49,38 @@
        Description="FTP PORTS" 
        Display="always" 
        Required="true">18000-20000</Config>
+      <Config 
+       Type="Path" 
+       Name="certs" 
+       Target="/certs" 
+       Default="/mnt/user/appdata/freepbx/certs" 
+       Mode="rw" 
+       Description="Drop your Certificates here for TLS w/PJSIP"
+       Required="false">/mnt/user/appdata/PMS</Config>
+      <Config 
+       Type="Path" 
+       Name="FreePBX web files" 
+       Target="/www/freepbx" 
+       Default="/mnt/user/appdata/freepbx/www/freepbx" 
+       Mode="rw" 
+       Description="FreePBX web files"
+       Required="true">/mnt/user/appdata/freepbx/www/freepbx</Config>
+      <Config 
+       Type="Path" 
+       Name="Asterisk and FreePBX Log Files" 
+       Target="/var/log/asterisk" 
+       Default="/mnt/user/appdata/freepbx/var/log/asterisk" 
+       Mode="rw" 
+       Description="Asterisk and FreePBX Log Files"
+       Required="true">/mnt/user/appdata/freepbx/var/log/asterisk</Config>
+      <Config 
+       Type="Path" 
+       Name="Config directory" 
+       Target="/data" 
+       Default="/mnt/user/appdata/freepbx/data" 
+       Mode="rw" 
+       Description="Data Persistence for Asterisk and Freepbx"
+       Required="true">/mnt/user/appdata/freepbx/data</Config>      
    <Config 
        Type="Variable" 
        Name="Allows you to use an internally provided MariaDB Server e.g. TRUE or FALSE" 
