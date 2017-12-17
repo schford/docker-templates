@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
 <Category>Communication</Category>
-  <Name>FreePBX 13</Name>
-  <Description>FreePBX 13 with Asterisk 13 - Thanks for this Docker goes to MicMay - mima84 and 
-                    based on the docker image jmar71n_freepbx so thanks to J Martin
+  <Name>FreePBX 14</Name>
+  <Description>
   </Description>
   <Project>https://www.freepbx.org/</Project>
-  <Registry>https://github.com/micmay/docker-freepbx</Registry>
-  <Repository>mima84/docker-freepbx</Repository>
+  <Registry>https://github.com/tiredofit/docker-freepbx</Registry>
+  <Repository>tiredofit/freepbx</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
  <Environment/>
@@ -16,7 +15,7 @@
     <Publish>
       <Port>
         <HostPort>8082</HostPort>
-        <ContainerPort>8082</ContainerPort>
+        <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
@@ -24,12 +23,47 @@
         <ContainerPort>5060</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
+      <Port>
+        <HostPort>4659</HostPort>
+        <ContainerPort>4659</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5160</HostPort>
+        <ContainerPort>5160</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>18000-2000</HostPort>
+        <ContainerPort>18000-2000</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
     </Publish>
   </Networking>
   <Data>
     <Volume>
       <HostDir></HostDir>
       <ContainerDir></ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/appdata/freepbx/certs</HostDir>
+      <ContainerDir>/certs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/appdata/freepbx/www/freepbx</HostDir>
+      <ContainerDir>/www/freepbx</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+     <Volume>
+      <HostDir>/mnt/appdata/freepbx/var/log/asterisk</HostDir>
+      <ContainerDir>/var/log/asterisk</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+     <Volume>
+      <HostDir>/mnt/appdata/freepbx/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
