@@ -13,61 +13,42 @@
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
-      <Port>
-        <HostPort>8082</HostPort>
-        <ContainerPort>80</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>5060</HostPort>
-        <ContainerPort>5060</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>4659</HostPort>
-        <ContainerPort>4659</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>5160</HostPort>
-        <ContainerPort>5160</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>18000-2000</HostPort>
-        <ContainerPort>18000-2000</ContainerPort>
-        <Protocol>udp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir></ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/appdata/freepbx/certs</HostDir>
-      <ContainerDir>/certs</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/appdata/freepbx/www/freepbx</HostDir>
-      <ContainerDir>/www/freepbx</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-     <Volume>
-      <HostDir>/mnt/appdata/freepbx/var/log/asterisk</HostDir>
-      <ContainerDir>/var/log/asterisk</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-     <Volume>
-      <HostDir>/mnt/appdata/freepbx/data</HostDir>
-      <ContainerDir>/data</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
- <publish>
+        <Config 
+       Type="Port" 
+       Name="Web UI" 
+       Target="80" 
+       Default="8082" 
+       Mode="tcp" 
+       Description="WEB UI" 
+       Display="always" 
+       Required="true">8082</Config>
+      <Config 
+       Type="Port" 
+       Name="PJSIP" 
+       Target="5060" 
+       Default="5060" 
+       Mode="tcp" 
+       Description="PJSIP PORT" 
+       Display="always" 
+       Required="true">5060</Config>
+      <Config 
+       Type="Port" 
+       Name="SIP PORT" 
+       Target="5160" 
+       Default="5160" 
+       Mode="tcp" 
+       Description="SIP PORT" 
+       Display="always" 
+       Required="true">5160</Config>
+      <Config 
+       Type="Port" 
+       Name="RTP PORTS" 
+       Target="18000-20000" 
+       Default="18000-20000" 
+       Mode="udp" 
+       Description="FTP PORTS" 
+       Display="always" 
+       Required="true">18000-20000</Config>
    <Config 
        Type="Variable" 
        Name="Allows you to use an internally provided MariaDB Server e.g. TRUE or FALSE" 
@@ -76,7 +57,7 @@
        Description="Set to false to use external DB" 
        Mask="false" 
        Display="advanced" 
-       Required="false">Username</Config>
+       Required="true">TRUE</Config>
    <Config 
        Type="Variable" 
        Name="Change if using external DB" 
@@ -85,7 +66,7 @@
        Description="Host or container name of MySQL Server e.g. freepbx-db" 
        Mask="false" 
        Display="advanced" 
-       Required="false">Username</Config>
+       Required="true">Host</Config>
    <Config 
        Type="Variable" 
        Name="DB Port" 
@@ -94,7 +75,7 @@
        Description="MySQL Port - Default 3306" 
        Mask="false" 
        Display="advanced" 
-       Required="false">Username</Config>
+       Required="true">3306</Config>
    <Config 
        Type="Variable" 
        Name="DB Name" 
@@ -103,54 +84,43 @@
        Description="MySQL Database name e.g. asterisk" 
        Mask="false" 
        Display="advanced" 
-       Required="false">Username</Config>
+       Required="true">asterisk</Config>
    <Config 
        Type="Variable" 
-       Name="DB Name" 
-       Target="PLEXPASS_USERNAME" 
-       Default="" 
-       Description="MySQL Database name e.g. asterisk" 
-       Mask="false" 
-       Display="advanced" 
-       Required="false">dbname</Config>
-   <Config 
-       Type="Variable" 
-       Name="DB Username" 
+       Name="DB User" 
        Target="DB_USER" 
        Default="asterisk" 
        Description="MySQL Username for above Database e.g. asterisk" 
        Mask="false" 
        Display="advanced" 
-       Required="false">Username</Config>
+       Required="true">asterisk</Config>
    <Config 
        Type="Variable" 
-       Name="DB Password" 
+       Name="DB Username" 
        Target="DB_PASS" 
-       Default="password" 
+       Default="asterisk" 
        Description="MySQL Password for above Database e.g. password" 
        Mask="false" 
        Display="advanced" 
-       Required="false">Username</Config>
-        Required="false">Username</Config>
+       Required="true">asterisk</Config>
    <Config 
        Type="Variable" 
-       Name="RTP start port" 
+       Name="RTP end port" 
        Target="RTP_START" 
        Default="18000" 
        Description="What port to start RTP Transmissions - Default 18000" 
        Mask="false" 
        Display="advanced" 
-       Required="false">Username</Config>
-       Required="false">Username</Config>
+       Required="true">18000</Config>
    <Config 
        Type="Variable" 
-       Name="DB Password" 
+       Name="RTP end port" 
        Target="RTP_FINISH" 
        Default="20000" 
-       Description="What port to start RTP Transmissions - Default 20000" 
+       Description="What port to end RTP Transmissions - Default 20000" 
        Mask="false" 
        Display="advanced" 
-       Required="false">Username</Config>
+       Required="true">Username</Config>
    </publish>
   <Version>05616fd2</Version>
   <WebUI>http://[IP]:[PORT:8082]</WebUI>
