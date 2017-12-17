@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+<Category>Communication</Category>
+  <Name>FreePBX 14</Name>
+  <Description>
+  </Description>
+  <Project>https://www.freepbx.org/</Project>
+  <Registry>https://github.com/tiredofit/docker-freepbx</Registry>
+  <Repository>tiredofit/freepbx</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+ <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+        <Config 
+       Type="Port" 
+       Name="Web UI" 
+       Target="80" 
+       Default="8082" 
+       Mode="tcp" 
+       Description="WEB UI" 
+       Display="always" 
+       Required="true">8082</Config>
+      <Config 
+       Type="Port" 
+       Name="PJSIP" 
+       Target="5060" 
+       Default="5060" 
+       Mode="tcp" 
+       Description="PJSIP PORT" 
+       Display="always" 
+       Required="true">5060</Config>
+      <Config 
+       Type="Port" 
+       Name="SIP PORT" 
+       Target="5160" 
+       Default="5160" 
+       Mode="tcp" 
+       Description="SIP PORT" 
+       Display="always" 
+       Required="true">5160</Config>
+      <Config 
+       Type="Port" 
+       Name="RTP PORTS" 
+       Target="18000-20000" 
+       Default="18000-20000" 
+       Mode="udp" 
+       Description="FTP PORTS" 
+       Display="always" 
+       Required="true">18000-20000</Config>
+      <Config 
+       Type="Path" 
+       Name="certs" 
+       Target="/certs" 
+       Default="/mnt/user/appdata/freepbx/certs" 
+       Mode="rw" 
+       Description="Drop your Certificates here for TLS w/PJSIP"
+       Required="false">/mnt/user/appdata/PMS</Config>
+      <Config 
+       Type="Path" 
+       Name="FreePBX web files" 
+       Target="/www/freepbx" 
+       Default="/mnt/user/appdata/freepbx/www/freepbx" 
+       Mode="rw" 
+       Description="FreePBX web files"
+       Required="true">/mnt/user/appdata/freepbx/www/freepbx</Config>
+      <Config 
+       Type="Path" 
+       Name="Asterisk and FreePBX Log Files" 
+       Target="/var/log/asterisk" 
+       Default="/mnt/user/appdata/freepbx/var/log/asterisk" 
+       Mode="rw" 
+       Description="Asterisk and FreePBX Log Files"
+       Required="true">/mnt/user/appdata/freepbx/var/log/asterisk</Config>
+      <Config 
+       Type="Path" 
+       Name="Config directory" 
+       Target="/data" 
+       Default="/mnt/user/appdata/freepbx/data" 
+       Mode="rw" 
+       Description="Data Persistence for Asterisk and Freepbx"
+       Required="true">/mnt/user/appdata/freepbx/data</Config>      
+   <Config 
+       Type="Variable" 
+       Name="Allows you to use an internally provided MariaDB Server e.g. TRUE or FALSE" 
+       Target="DB_EMBEDDED" 
+       Default="TRUE" 
+       Description="Set to false to use external DB" 
+       Mask="false" 
+       Display="advanced" 
+       Required="true">TRUE</Config>
+   <Config 
+       Type="Variable" 
+       Name="Change if using external DB" 
+       Target="DB_HOST" 
+       Default="Host" 
+       Description="Host or container name of MySQL Server e.g. freepbx-db" 
+       Mask="false" 
+       Display="advanced" 
+       Required="true">Host</Config>
+   <Config 
+       Type="Variable" 
+       Name="DB Port" 
+       Target="DB_PORT" 
+       Default="3306" 
+       Description="MySQL Port - Default 3306" 
+       Mask="false" 
+       Display="advanced" 
+       Required="true">3306</Config>
+   <Config 
+       Type="Variable" 
+       Name="DB Name" 
+       Target="DB_NAME" 
+       Default="asterisk" 
+       Description="MySQL Database name e.g. asterisk" 
+       Mask="false" 
+       Display="advanced" 
+       Required="true">asterisk</Config>
+   <Config 
+       Type="Variable" 
+       Name="DB User" 
+       Target="DB_USER" 
+       Default="asterisk" 
+       Description="MySQL Username for above Database e.g. asterisk" 
+       Mask="false" 
+       Display="advanced" 
+       Required="true">asterisk</Config>
+   <Config 
+       Type="Variable" 
+       Name="DB Username" 
+       Target="DB_PASS" 
+       Default="asterisk" 
+       Description="MySQL Password for above Database e.g. password" 
+       Mask="false" 
+       Display="advanced" 
+       Required="true">asterisk</Config>
+   <Config 
+       Type="Variable" 
+       Name="RTP end port" 
+       Target="RTP_START" 
+       Default="18000" 
+       Description="What port to start RTP Transmissions - Default 18000" 
+       Mask="false" 
+       Display="advanced" 
+       Required="true">18000</Config>
+   <Config 
+       Type="Variable" 
+       Name="RTP end port" 
+       Target="RTP_FINISH" 
+       Default="20000" 
+       Description="What port to end RTP Transmissions - Default 20000" 
+       Mask="false" 
+       Display="advanced" 
+       Required="true">Username</Config>
+   </publish>
+  <Version>05616fd2</Version>
+  <WebUI>http://[IP]:[PORT:8082]</WebUI>
+  <Banner></Banner>
+  <Icon>https://raw.githubusercontent.com/Brownster/docker-templates/master/brownster/images/freepbx.png</Icon>
+</Container>
