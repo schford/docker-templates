@@ -67,6 +67,91 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
+ <publish>
+   <Config 
+       Type="Variable" 
+       Name="Allows you to use an internally provided MariaDB Server e.g. TRUE or FALSE" 
+       Target="DB_EMBEDDED" 
+       Default="TRUE" 
+       Description="Set to false to use external DB" 
+       Mask="false" 
+       Display="advanced" 
+       Required="false">Username</Config>
+   <Config 
+       Type="Variable" 
+       Name="Change if using external DB" 
+       Target="DB_HOST" 
+       Default="Host" 
+       Description="Host or container name of MySQL Server e.g. freepbx-db" 
+       Mask="false" 
+       Display="advanced" 
+       Required="false">Username</Config>
+   <Config 
+       Type="Variable" 
+       Name="DB Port" 
+       Target="DB_PORT" 
+       Default="3306" 
+       Description="MySQL Port - Default 3306" 
+       Mask="false" 
+       Display="advanced" 
+       Required="false">Username</Config>
+   <Config 
+       Type="Variable" 
+       Name="DB Name" 
+       Target="DB_NAME" 
+       Default="asterisk" 
+       Description="MySQL Database name e.g. asterisk" 
+       Mask="false" 
+       Display="advanced" 
+       Required="false">Username</Config>
+   <Config 
+       Type="Variable" 
+       Name="DB Name" 
+       Target="PLEXPASS_USERNAME" 
+       Default="" 
+       Description="MySQL Database name e.g. asterisk" 
+       Mask="false" 
+       Display="advanced" 
+       Required="false">dbname</Config>
+   <Config 
+       Type="Variable" 
+       Name="DB Username" 
+       Target="DB_USER" 
+       Default="asterisk" 
+       Description="MySQL Username for above Database e.g. asterisk" 
+       Mask="false" 
+       Display="advanced" 
+       Required="false">Username</Config>
+   <Config 
+       Type="Variable" 
+       Name="DB Password" 
+       Target="DB_PASS" 
+       Default="password" 
+       Description="MySQL Password for above Database e.g. password" 
+       Mask="false" 
+       Display="advanced" 
+       Required="false">Username</Config>
+        Required="false">Username</Config>
+   <Config 
+       Type="Variable" 
+       Name="RTP start port" 
+       Target="RTP_START" 
+       Default="18000" 
+       Description="What port to start RTP Transmissions - Default 18000" 
+       Mask="false" 
+       Display="advanced" 
+       Required="false">Username</Config>
+       Required="false">Username</Config>
+   <Config 
+       Type="Variable" 
+       Name="DB Password" 
+       Target="RTP_FINISH" 
+       Default="20000" 
+       Description="What port to start RTP Transmissions - Default 20000" 
+       Mask="false" 
+       Display="advanced" 
+       Required="false">Username</Config>
+   </publish>
   <Version>05616fd2</Version>
   <WebUI>http://[IP]:[PORT:8082]</WebUI>
   <Banner></Banner>
