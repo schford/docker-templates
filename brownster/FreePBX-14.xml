@@ -112,7 +112,7 @@ Upon startup configuration files are copied and generated to support portability
   </Environment>
   <Version>05616fd2</Version>
   <WebUI>http://[IP]:[PORT:8082]/admin</WebUI>
-  #<ExtraParams>--network homenet --ip 192.168.1.200</ExtraParams>
+  <ExtraParams></ExtraParams>
   <Banner></Banner>
   <Icon>https://raw.githubusercontent.com/Brownster/docker-templates/master/brownster/images/freepbx.png</Icon>
 </Container>
