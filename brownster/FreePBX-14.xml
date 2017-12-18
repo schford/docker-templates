@@ -24,7 +24,7 @@ Upon startup configuration files are copied and generated to support portability
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
-    <Mode>none</Mode>
+    <Mode>bridge</Mode>
     <Publish>
       <Port>
         <HostPort>8080</HostPort>
@@ -112,7 +112,7 @@ Upon startup configuration files are copied and generated to support portability
   </Environment>
   <Version>05616fd2</Version>
   <WebUI>http://[IP]:[PORT:8082]</WebUI>
-  <ExtraParams>--network homenet --ip 192.168.1.200</ExtraParams>
+  #<ExtraParams>--network homenet --ip 192.168.1.200</ExtraParams>
   <Banner></Banner>
   <Icon>https://raw.githubusercontent.com/Brownster/docker-templates/master/brownster/images/freepbx.png</Icon>
 </Container>
