@@ -13,7 +13,7 @@
 An IPTV Proxy for Plex Live TV &amp;amp; DVR</Overview>
   <Category>Tools: MediaApp:Video MediaServer:Video Network:Proxy</Category>
   <WebUI>http://[IP]:[PORT:6077]</WebUI>
-  <TemplateURL>https://github.com/Brownster/docker-templates/new/master/brownster</TemplateURL>
+  <TemplateURL>https://github.com/Brownster/docker-templates/new/master/brownster/TellyTV</TemplateURL>
   <Icon>https://i.imgur.com/eapTTSL.png</Icon>
   <ExtraParams/>
   <PostArgs/>
