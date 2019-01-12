@@ -1,26 +1,24 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>telly</Name>
-  <Repository>tellytv/telly</Repository>
-  <Registry>https://hub.docker.com/r/tellytv/telly/dockerfile/</Registry>
-  <Network>host</Network>
+  <Name>telly-dev-ffmpeg</Name>
+  <Repository>tellytv/telly:dev-ffmpeg</Repository>
+  <Registry>https://hub.docker.com/r/tellytv/telly/~/dockerfile/</Registry>
+  <Network>bridge</Network>
   <MyIP/>
   <Privileged>false</Privileged>
-  <Support>https://github.com/tellytv/</Support>
-  <Project>https://github.com/tellytv/</Project>
-  <Overview>Telly - IPTV on Plex Live TV&#xD;
-&#xD;
-An IPTV Proxy for Plex Live TV &amp;amp; DVR</Overview>
-  <Category>Tools: MediaApp:Video MediaServer:Video Network:Proxy</Category>
+  <Support>https://hub.docker.com/r/tellytv/telly/</Support>
+  <Project>https://github.com/tellytv/telly</Project>
+  <Overview>Sourced from telly github wiki; created by @Porkie on the telly discord</Overview>
+  <Category/>
   <WebUI>http://[IP]:[PORT:6077]</WebUI>
-  <TemplateURL>https://github.com/Brownster/docker-templates/new/master/brownster/TellyTV</TemplateURL>
-  <Icon>https://i.imgur.com/eapTTSL.png</Icon>
+  <TemplateURL/>
+  <Icon>https://cdn.discordapp.com/attachments/414169930544578562/415964140432130048/Screenshot_2018-02-21_14.12.44.png</Icon>
   <ExtraParams/>
   <PostArgs/>
-  <DateInstalled>1519326784</DateInstalled>
-  <Description>Telly - IPTV on Plex Live TV&#xD;
-&#xD;
-An IPTV Proxy for Plex Live TV &amp;amp; DVR</Description>
+  <DateInstalled>1535050413</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Running the dev branch of telly, with ffmpeg available.  ffmpeg can be enabled in the config file.</Description>
   <Networking>
     <Mode>host</Mode>
     <Publish>
@@ -33,32 +31,20 @@ An IPTV Proxy for Plex Live TV &amp;amp; DVR</Description>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/telly/tmp</HostDir>
-      <ContainerDir>/tmp</ContainerDir>
+      <HostDir>/mnt/user/appdata/telly/</HostDir>
+      <ContainerDir>/etc/telly</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment>
     <Variable>
-      <Value>1</Value>
-      <Name>STREAMS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>PLAYLIST</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>USEREGEX</Name>
+      <Value>Europe/London</Value>
+      <Name>TZ</Name>
       <Mode/>
     </Variable>
   </Environment>
-  <Config Name="Host Port" Target="6077" Default="6077" Mode="tcp" Description="Container Port: 6077" Type="Port" Display="always" Required="true" Mask="false">6077</Config>
-  <Config Name="Streams Allowed" Target="STREAMS" Default="1" Mode="" Description="How many streams your IPTV provides" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
-  <Config Name="Path or URL to m3u playlist from IPTV Provider" Target="PLAYLIST" Default="" Mode="" Description="Add your URL or m3u location here" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="USEREGEX" Target="USEREGEX" Default="" Mode="" Description="Filter Countries etc with regex example UK|US for UK and US only" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="/tmp" Target="/tmp" Default="" Mode="rw" Description="Path to /tmp folder" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/telly/tmp</Config>
+  <Labels/>
+  <Config Name="Host Port 1" Target="6077" Default="6077" Mode="tcp" Description="Container Port: 6077" Type="Port" Display="always" Required="true" Mask="false">6077</Config>
+  <Config Name="TZ" Target="TZ" Default="Europe/London" Mode="" Description="Timezone" Type="Variable" Display="always" Required="false" Mask="false">Europe/London</Config>
+  <Config Name="/etc/telly" Target="/etc/telly" Default="" Mode="rw" Description="Container Path: /etc/telly" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/telly/</Config>
 </Container>
-
