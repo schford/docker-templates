@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>telly</Name>
-  <Repository>tombowditch/telly</Repository>
+  <Repository>tellytv/telly</Repository>
   <Registry>https://hub.docker.com/r/tellytv/telly/dockerfile/</Registry>
   <Network>host</Network>
   <MyIP/>
   <Privileged>false</Privileged>
-  <Support>https://lime-technology.com/forums/topic/69619-support-telly-iptv-on-plex-live-tv/</Support>
+  <Support>https://github.com/tellytv/</Support>
   <Project>https://github.com/tellytv/</Project>
   <Overview>Telly - IPTV on Plex Live TV&#xD;
 &#xD;
