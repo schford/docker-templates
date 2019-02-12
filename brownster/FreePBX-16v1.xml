@@ -83,7 +83,7 @@
         <description>RTP ports</description>
       </Port>
     </Publish>
-    </Networking>
+  </Networking>
     <Data>
       <Volume>
         <HostDir>/mnt/cache/appdata/freepbx/certs</HostDir>
