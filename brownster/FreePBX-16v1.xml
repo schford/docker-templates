@@ -2,12 +2,12 @@
 <Container>
 <Category>Communication</Category>
   <Name>FreePBX-16</Name>
-  <Description>
+  <Overview>
     Container by tiredofit https://github.com/tiredofit/docker-freepbx
     This will build a container for FreePBX 16- A Voice over IP Manager for Asterisk. 
     Upon starting this image it will give you a turn-key PBX system for SIP calling.
     This Container uses tiredofit debian:stretch as a base.
-  </Description>
+  </Overview>
   <Project>https://www.freepbx.org/</Project>
   <Registry>https://github.com/tiredofit/docker-freepbx</Registry>
   <Repository>tiredofit/freepbx:latest</Repository>
