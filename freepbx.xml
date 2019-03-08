@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Container version="2">
+<Container>
 <Category>Communication</Category>
   <Name>FreePBX-16</Name>
   <Overview>
@@ -162,6 +162,7 @@
       <Name>ENABLE_XMPP</Name>
       <Value>FALSE</Value>
       <description>Enable XMPP Module with MongoDB - Default FALSE</description>
+    </Variable> 
     <Variable>
       <Name>HTTP_PORT</Name>
       <Value>8085</Value>
@@ -210,9 +211,7 @@
       </description>
     </Variable>
    </Environment>
-  <Version>05616fd2</Version>
   <WebUI>http://[IP]:[PORT:8085]/admin</WebUI>
-  <ExtraParams></ExtraParams>
   <Banner></Banner>
   <Icon>https://raw.githubusercontent.com/Brownster/docker-templates/master/brownster/images/freepbx.png</Icon>
 </Container>
